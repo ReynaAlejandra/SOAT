@@ -33,7 +33,8 @@ app.use(express.urlencoded({ limit: '20mb', extended: true }));
 app.use(morgan('combined'))
 app.use(cors())
 app.use((req, res, next) => {
-  res.header('Access-Control-Allow-Origin', 'http://localhost:8080');
+  // res.header('Access-Control-Allow-Origin', 'http://localhost:8080');
+  res.header('Access-Control-Allow-Origin', 'http://10.0.0.78:8080');
   res.header('Access-Control-Allow-Credentials', 'true');
   res.header('Access-Control-Allow-Methods', 'GET, POST, PUT, DELETE');
   res.header('Access-Control-Allow-Headers', 'Content-Type, Authorization');
@@ -41,7 +42,8 @@ app.use((req, res, next) => {
 });
 
 // Conexión a MongoDB
-mongoose.connect('mongodb://localhost:27017/accidentes')
+// mongoose.connect('mongodb://localhost:27017/accidentes')
+mongoose.connect('mongodb://10.0.0.78:27017/accidentes')
 //mongoose.connect(process.env.MONGO_URI)
   .then(() => console.log('MongoDB connected'))
   .catch(err => console.log(err));
