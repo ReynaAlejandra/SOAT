@@ -1,0 +1,9 @@
+{
+    "nombre": "Administrador",
+    "apellidos": "MinGob",
+    "carnet": "123456789",
+    "grado": "S/N",
+    "usuario": "mingobadmin",
+    "password": "mingobadmin",
+    "rol": "administrador"
+}

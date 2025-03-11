@@ -1,0 +1,7 @@
+para iniciar
+- backend:
+>>mongod
+>>node index.js
+
+- frontend:
+>>npm run serve
